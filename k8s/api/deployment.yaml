@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: api
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: api
@@ -13,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: leandromatpereira/api-k8s-produtos:v1
+          image: leandromatpereira/api-k8s-produtos:v2
           resources:
             limits:
               memory: "128Mi"
@@ -22,7 +23,7 @@ spec:
             - containerPort: 8080
           env:
             - name: MONGODB_URI
-              value: mongodb://mongouser:mongopwd@localhost:27017/admin
+              value: mongodb://mongouser:mongopwd@mongodb-service:27017/admin
           
 
 
