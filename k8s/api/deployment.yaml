@@ -3,11 +3,7 @@ kind: Deployment
 metadata:
   name: api
 spec:
-<<<<<<< HEAD
   replicas: 3
-=======
-  replicas: 1
->>>>>>> fa80460675baebc726ae69a2df442ef7c577c66d
   selector:
     matchLabels:
       app: api
@@ -18,29 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-<<<<<<< HEAD
           image: leandromatpereira/api-k8s-produtos:v3
-=======
-          image: leandromatpereira/api-k8s-produtos:v2
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 8080
-            initialDelaySeconds: 0
-            periodSeconds: 5
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 1
-          readinessProbe:
-            httpGet:
-              path: /read
-              port: 8080
-            initialDelaySeconds: 0
-            periodSeconds: 5
-            timeoutSeconds: 5
-            successThreshold: 1
-            failureThreshold: 1
->>>>>>> fa80460675baebc726ae69a2df442ef7c577c66d
           resources:
             requests:
               memory: "32Mi"
