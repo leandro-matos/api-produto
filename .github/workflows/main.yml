@@ -38,3 +38,4 @@ jobs:
           push: true
           tags: 
             leandromatpereira/api-k8s-produtos:latest
+            leandromatpereira/api-k8s-produtos:${{github.run_number}}
