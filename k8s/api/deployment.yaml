@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: api
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: api
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: leandromatpereira/api-k8s-produtos:v2
+          image: leandromatpereira/api-k8s-produtos:v3
           resources:
             limits:
               memory: "128Mi"
