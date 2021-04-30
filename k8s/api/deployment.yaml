@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: leandromatpereira/api-k8s-produtos:v3
+          image: leandromatpereira/api-k8s-produtos:latest
           resources:
             requests:
               memory: "32Mi"
