@@ -8,5 +8,9 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
+<<<<<<< HEAD
       nodePort: 30000
   type: LoadBalancer
+=======
+  type: LoadBalancer
+>>>>>>> fa80460675baebc726ae69a2df442ef7c577c66d
