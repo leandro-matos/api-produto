@@ -64,5 +64,4 @@ jobs:
           images: leandromatpereira/api-k8s-produtos:latest
           manifests: |
             k8s/api/deployment.yaml        
-            k8s/api/service.yaml 
-  
+            k8s/api/service.yaml
